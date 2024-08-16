@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80vw;  /* Reduced relative width */
+    max-width: 400px;  /* Reduced maximum width */
+}
+
+.board {
+    display: grid;
+    margin: 0 auto 20px auto;
+    max-width: 330px;
+    grid-template-columns: repeat(3, 1fr);  /* Equal columns */
+    grid-gap: 5px;  /* Small gap between cells */
+    margin-bottom: 20px;
+    aspect-ratio: 1;  /* Maintain square aspect ratio */
+}
+
+.cell {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;  /* Font size relative to viewport width */
+    cursor: pointer;
+    aspect-ratio: 1;  /* Maintain square aspect ratio */
+    max-width: 100px;  /* Maximum width of each cell */
+    max-height: 100px; /* Maximum height of each cell */
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80vw;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
