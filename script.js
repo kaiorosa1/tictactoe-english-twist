@@ -105,6 +105,13 @@ function closePopup() {
     }
 }
 
+document.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    if (event.target === popup) {
+        closePopup();
+    }
+});
+
 // Add restart button functionality
 document.addEventListener('DOMContentLoaded', () => {
     const restartButton = document.createElement('button');
